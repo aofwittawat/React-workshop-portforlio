@@ -3,6 +3,10 @@ import { NavLink } from 'react-router-dom'
 
 export const StyledSideNav = styled.div`
     background: #333;
+
+    @media (max-width:640px){
+        display: none;
+    }
 `
 
 export const StyledUl = styled.ul`
@@ -11,7 +15,10 @@ export const StyledUl = styled.ul`
     padding: 0;
 `
 
-export const StyledLink = styled(NavLink)`
+const activeClassName = 'nav-item-active'
+
+
+export const StyledLink = styled(NavLink).attrs({activeClassName})`
     width: 100%;
     display: inline-block;
     padding: 1rem;
@@ -21,6 +28,9 @@ export const StyledLink = styled(NavLink)`
     &:hover {
         padding-left: 1rem;
         background: #111;
+    }
+    &.${activeClassName}{
+        background: #111
     }
 `
 
