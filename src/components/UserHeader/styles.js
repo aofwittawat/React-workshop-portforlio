@@ -30,7 +30,12 @@ export const ViewResumeLink = styled.a`
     border-radius: 5px;
     &:hover {
         boder: 2px solid #111;
-        background: tranparent;
+        background: transparent;
         color: #333;
+    }
+
+    svg {
+        position: relative;
+        top: 3px;
     }
 `

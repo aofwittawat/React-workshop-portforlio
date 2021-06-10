@@ -18,7 +18,7 @@ function App() {
   if (!user) {
     return <div />
   }
-  return  <Pages user={ user} />
+  return  <Pages user={user} />
 }
 
 export default App;

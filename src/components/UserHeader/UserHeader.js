@@ -21,11 +21,22 @@ const UserHeader = ({ user }) => {
                        <a 
                             href={`https://gitconnected.com/${user.basics.username}`}
                             target="_blank"
-                            rel = "noreferrer nopenner"
+                            rel = "noreferrer noopenner"
                         >
                             @{user.basics.username}
                         </a>
                    </h4>
+                   <p>{user.basics.label}</p>
+                   <p>Coding in {user.basics.region}</p>
+                   <p>{user.basics.yearsOfExperience} years of experience as a developer</p>
+                   <p>{user.basics.headline}</p>
+                   <ViewResumeLink
+                        href={`https://gitconnected.com/${user.basics.username}/resume`}
+                        target="_blank"
+                        rel = "noreferrer noopenner"
+                   >
+                        <span>View Resume <ArrowRight16 /></span>
+                   </ViewResumeLink>
                </div>
            </Header>
         </HeaderContainer>
